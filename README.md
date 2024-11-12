@@ -15,7 +15,7 @@ Cool Clicker is a fun, incremental game inspired by the classic Cookie Clicker. 
 ## Description
 Cool Clicker is an incremental game where players click on a giant cookie (or their chosen image) to earn points. These points can be used to buy upgrades and enhance click power, fostering a sense of progression and strategy. While the game aims to capture the essence of the original Cookie Clicker, it will be a simpler, more accessible version designed to be both functional and enjoyable.
 
-## Techniques to be Applied
+## Techniques Applied
 - **Visual Studio**: For code development and project management
 - **GitHub**: For version control and collaboration
 - **HTML**: For structuring the game interface
