@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Coconut Clicker</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+        <nav>
+        <ul class="nav-list">
+            <li class="active"><a href="classic.html">Classic</a></li>
+            <!--<li><a href="#">Timed</a></li>-->
+            <li><a href="competitive.html">Competitive</a></li>
+            <li><a href="NewCreature.html">New Creature</a></li>
+        </ul>
+        </nav>
+    <h1>Coconut Clicker!</h1>
+    <br>
+    <div id = 'container'>
+        <img  id="coconut" onclick="IncrementMoney()" height = 300px width= 300px src = 'https://purepng.com/public/uploads/large/purepng.com-coconutscoconutcocos-nuciferagenus-cocospalmcoconuts-1701527198754azvzr.png' alt = "Coconut Img" >
+        <h4>Coins</h4>
+        <div id = "scoreDisplay"></div>
+    </div>
+    <div><h5>Lifetime coins: <span id="lifetimeCoins"></span></h5></div>
+    <div><h4 id="milestoneDisplay">Current Milestone: <span id="currentMilestone"></span></h4></div>
+    <div id="myProgress">
+        <div id="myBar"><span id="barPercentage"></span>%</div>
+    </div>
+    <br>
+    <div><h4 >New Unlocks at 10000 coins!</h4></div>
+    <div class="flex-container">
+        <div class="flex-child magenta">
+            <div id= 'inventory_container'>
+                <div class="shop">
+                    <h2>Shop</h2>
+                    <div class="upgrade">
+                        <span>Clicker (Cost: <span id = 'Clicker'> </span>)</span>
+                        <button onclick="purchaseClicker()">Buy</button>
+                    </div>
+                    <div class="upgrade">
+                        <span>Juicer (Cost: <span id = 'Juicer'> </span>)</span>
+                        <button onclick="purchaseJuicer()">Buy</button>
+                    </div>
+                    <div class="upgrade">
+                        <span>Crusher (Cost: <span id = 'Crusher'> </span>)</span>
+                        <button onclick="purchaseCrusher()">Buy</button>
+                    </div>
+                    <div class="upgrade">
+                        <span>Jackhammer (Cost: <span id = 'Jackhammer'> </span>)</span>
+                        <button onclick="purchaseJackhammer()">Buy</button>
+                    </div>
+                    <h2 class="hidden" id="superShopTitle">Super Shop (hover for details)</h2>
+                    <div class="shop hidden" id="superShop">
+                        <div class="upgrade">
+                            <span>Bountiful Blessing (Cost: 250000)</span>
+                            <button onclick="purchaseBountifulBlessing()" title="Bountiful Blessing: Adds 4x clicks based on number of purchased items (ie clicks per second = 4*#of items)">Buy</button>
+                        </div>
+                        <div class="upgrade">
+                            <span>Milestone Booster (Cost: 150000)</span>
+                            <button onclick="purchaseMilestoneBooster()" title="Milestone Booster: Adds 15% of Current Milestone to balance once achieved">Buy</button>
+                        </div>
+                        <div class="upgrade">
+                            <span>Lucky Break(Cost: 50000)</span>
+                            <button onclick="purchaseLuckyBreak()" title="Lucky Break: Who likes gambling! Answer, you do. Rewards a random amount of coins when purchased">Buy</button>
+                        </div>
+                        <div class="upgrade">
+                            <span>Golden Harvest (Cost: <span id='goldenHarvestCost'> </span>)</span>
+                            <button onclick="purchaseGoldenHarvest()" title="Golden Harvest: Doubles coins recieved from all upgrades for 10 seconds">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex-child green">
+            <div id= 'inventory_container'>
+                <div class="shop">
+                    <h2>Inventory</h2>
+                    <div class="upgrade">
+                        <span>Clicker  x<span id = 'ClickerCount'> </span></span>
+                        <span>(1 click per second)</span>
+                    </div>
+                    <div class="upgrade">
+                        <span>Juicer x<span id = 'JuicerCount'> </span></span>
+                        <span>(5 clicks per second)</span>
+                    </div>
+                    <div class="upgrade">
+                        <span>Crusher x<span id = 'CrusherCount'> </span></span>
+                        <span>(15 clicks per second)</span>
+                    </div>
+                    <div class="upgrade">
+                        <span>Jackhammer x<span id = 'JackhammerCount'> </span></span>
+                        <span>(25 clicks per second)</span>
+                    </div>
+                    <h2 class="hidden" id="superInventoryTitle">Super Inventory</h2>
+                    <div class="shop hidden" id="superInventory">
+                        <div class="upgrade">
+                            <span>Bountiful Blessing Status: <span id = 'bountifulBlessing'> </span></span>
+                        </div>
+                        <div class="upgrade">
+                            <span>Bountiful Blessing Multiplier x<span id = 'bountifulBlessingMul'> </span></span>
+                        </div>
+                        <div class="upgrade">
+                            <span>Milestone Booster Status: <span id = 'milestoneBooster'> </span></span>
+                        </div>
+                        <div class="upgrade">
+                            <span>Last Lucky Break: <span id='luckyBreak'> </span></span>
+                        </div>
+                        <div class="upgrade">
+                            <span>Golden Harvest Status: <span id='goldenHarvestActive'> </span></span>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+      </div>
+   
+</body>
+</html>

@@ -1,0 +1,247 @@
+
+:root {  /* also from https://github.com/kevin-powell/funky-nav/blob/main/style.css
+    global variables for the color values in the navbar]
+    */
+    --body-bg: rgb(255, 235, 191);
+    --nav-bg: #4caf50;
+    ;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+#coconut {
+    transition: transform 0.1s; /*needed for the animation on click*/
+    cursor: pointer;
+
+    max-width: 100%;
+    height: auto;
+
+}
+#coconut2 {
+  transition: transform 0.1s; /*needed for the animation on click*/
+  cursor: pointer;
+
+  max-width: 100%;
+  height: auto;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-size: 1.25rem;
+    background: var(--body-bg);
+    padding-inline-start: 20rem;
+}
+
+h1 {
+    color: #4caf50;
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+#inventory_container {
+  text-align: center;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+#scoreDisplay {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #4caf50;
+}
+
+#comp1ScoreDisplay {
+  font-size: 2em;
+  margin: 20px 0;
+  color: #4caf50;
+}
+
+#comp2ScoreDisplay {
+  font-size: 2em;
+  margin: 20px 0;
+  color: #4caf50;
+}
+
+.shop {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upgrade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.upgrade button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.upgrade button:hover {
+    background-color: #45a049;
+}
+
+label {
+  display: block;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 140px;
+}
+
+.droparea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Nav bar : https://github.com/kevin-powell/funky-nav/blob/main/style.css
+
+    transitions are expiremental and only avalible on chrome browser
+*/
+
+  nav {
+    background: var(--nav-bg);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-block: 2rem;
+  }
+  
+  .nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .nav-list a {
+    color: rgb(1, 1, 1);
+    display: block;
+    text-decoration: none;
+  }
+  
+  .nav-list li {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    margin-inline: 1rem 0;
+    /* prevent animation glitch on right side */
+    box-shadow: 2px 0 0 var(--body-bg);
+  }
+  
+  .nav-list li.active {
+    view-transition-name: nav;
+    display: block;
+    background: var(--body-bg);
+    position: relative;
+    z-index: -1;
+    border-radius: 100vw 0 0 100vw;
+  }
+  
+  ::view-transition-group(nav) {
+    animation-duration: 1s;
+  }
+  
+  .nav-list li.active::before,
+  .nav-list li.active::after {
+    --border-radius: 1rem;
+  
+    content: "";
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right: 0rem;
+    background: var(--nav-bg);
+  }
+  
+  .nav-list li.active::before {
+    border-radius: 0 0 var(--border-radius);
+    top: calc(var(--border-radius) * -1);
+    box-shadow: 5px 5px 0 5px var(--body-bg);
+  }
+  
+  .nav-list li.active::after {
+    border-radius: 0 var(--border-radius) 0 0;
+    bottom: calc(var(--border-radius) * -1);
+    box-shadow: 5px -5px 0 5px var(--body-bg);
+  }
+  
+  .nav-list li:nth-child(1) a {
+    view-transition-name: test;
+  }
+  
+  .nav-list li:nth-child(2) a {
+    view-transition-name: test-2;
+  }
+  
+  .nav-list li:nth-child(3) a {
+    view-transition-name: test-3;
+  }
+  
+
+.flex-container {
+    margin-top: 20px;
+    display: flex;
+}
+.flex-child {
+    width: 475px;
+    height: 475px;
+    flex: 1;
+}  
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+.hidden {
+  display: none;
+}
+
+#myProgress {
+  width: calc(100% - 200px); /* Only way i could find to make the progress bar not touch side  https://www.w3schools.com/cssref/func_calc.php*/
+  background-color: #ddd;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #04AA6D;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 7px;
+  transition: width 0.5s ease; /*smooth Trasnition*/
+}

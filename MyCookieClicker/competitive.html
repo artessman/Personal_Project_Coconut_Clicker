@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Coconut Clicker</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='competitive.js' defer></script>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="classic.html">Classic</a></li>
+            <!--<li><a href="#">Timed</a></li>-->
+            <li class="active"><a href="competitive.html">Competitive</a></li>
+            <li><a href="NewCreature.html">New Creature</a></li>
+        </ul>
+    </nav>
+    <h1>Coconut Clicker!</h1>
+    <br>
+    <div class="flex-container">
+        <div class="flex-child magenta">
+            <div id='container'>
+                <img id="coconut" onclick="addPlayerOnePoints()" height=300px width=300px
+                    src='https://purepng.com/public/uploads/large/purepng.com-coconutscoconutcocos-nuciferagenus-cocospalmcoconuts-1701527198754azvzr.png'
+                    alt="Coconut Img">
+                <h4>Player 1 Score:</h4>
+                <div id = "comp1ScoreDisplay"></div>
+            </div>
+        </div>
+        
+        <div class="flex-child green">
+            <div id='container'>
+                <img id="coconut2" onclick="addPlayerTwoPoints()" height=300px width=300px
+                    src='https://purepng.com/public/uploads/large/purepng.com-coconutscoconutcocos-nuciferagenus-cocospalmcoconuts-1701527198754azvzr.png'
+                    alt="Coconut Img">
+                <h4>Player 2 Score:</h4>
+                <div id = "comp2ScoreDisplay"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Competitive Mode</h2>
+    <h3>First to 100 wins!</h3>
+    <h1>Player 1: Press A to score</h1>
+    <h1>Player 2: Press L to score</h1>
+</body>
+
+</html>

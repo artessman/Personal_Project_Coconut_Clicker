@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="view-transition" content="same-origin" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+        <nav>
+            <ul class="nav-list">
+                <li ><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Another</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">And another</a></li>
+            </ul>
+        </nav>
+    <h1>Coconut Clicker!</h1>
+    <br>
+    <div id = 'container'>
+        <img  id="coconut" onclick="IncrementMoney()" height = 300px width= 300px src = 'https://purepng.com/public/uploads/large/purepng.com-coconutscoconutcocos-nuciferagenus-cocospalmcoconuts-1701527198754azvzr.png' alt = "Coconut Img" >
+        <h4>Money</h4>
+        <div id = "scoreDisplay"></div>
+    </div>
+    <div class="shop">
+        <h2>Shop</h2>
+        <div class="upgrade">
+            <span>Clicker (Cost: <span id = 'Clicker'> </span>)</span>
+            <button onclick="purchaseClicker()">Buy</button>
+        </div>
+        <div class="upgrade">
+            <span>Juicer (Cost: <span id = 'Juicer'> </span>)</span>
+            <button onclick="purchaseJuicer()">Buy</button>
+        </div>
+        <div class="upgrade">
+            <span>Crusher (Cost: <span id = 'Crusher'> </span>)</span>
+            <button onclick="purchaseCrusher()">Buy</button>
+        </div>
+        <div class="upgrade">
+            <span>Jackhammer (Cost: <span id = 'Jackhammer'> </span>)</span>
+            <button onclick="purchaseJackhammer()">Buy</button>
+        </div>
+    </div>
+</body>
+</html>
